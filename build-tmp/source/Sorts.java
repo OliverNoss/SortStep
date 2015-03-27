@@ -34,8 +34,8 @@ public class Sorts
 
   public void insertionSort(int[] list)
   {
-    for (int i=0; i<list.length; i++) {
-      for (int j=0; j<list.length; j++) {
+    for (int i=0; i<list.length-1; i++) {
+      for (int j=0; j<list.length-1; j++) {
       
       }
     }

@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class SortStep extends PApplet {
+
 private int numInts = 10;
 private int largestInt = 100;
 private int [] myArray= new int[numInts];
@@ -22,9 +38,9 @@ public void selectionSortTest()
   mySorts.selectionSort(myArray);
   watch.stop();
   System.out.println("Selection Sort took " +watch.elapsedTime()/1000 + " microseconds");
-  // for (Integer o : myArray) {
-  //    System.out.print(o);
-  //  } 
+  for (Integer o : myArray) {
+     System.out.print(o);
+   } 
 }
 public void bubbleSortTest()
 {
@@ -35,10 +51,10 @@ public void bubbleSortTest()
   mySorts.bubbleSort(myArray);
   watch.stop();
   System.out.println("Bubble Sort took " +watch.elapsedTime()/1000 + " microseconds");
-  // for (Integer o : myArray) {
-  //    System.out.print(o);
-  //  } 
-  //  System.out.println();
+  for (Integer o : myArray) {
+     System.out.print(o);
+   } 
+   System.out.println();
 }
 public void insertionSortTest()
 {
@@ -68,3 +84,12 @@ private void fillArray(int numInts, int largestInt)
   }
 }
 
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "SortStep" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
