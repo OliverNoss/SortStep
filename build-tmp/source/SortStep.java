@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class SortStep extends PApplet {
 
-private int numInts = 10;
+private int numInts = 100;
 private int largestInt = 100;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
@@ -38,9 +38,9 @@ public void selectionSortTest()
   mySorts.selectionSort(myArray);
   watch.stop();
   System.out.println("Selection Sort took " +watch.elapsedTime()/1000 + " microseconds");
-  for (Integer o : myArray) {
-     System.out.print(o);
-   } 
+  // for (Integer o : myArray) {
+  //    System.out.print(o);
+  //  } 
 }
 public void bubbleSortTest()
 {
@@ -51,10 +51,10 @@ public void bubbleSortTest()
   mySorts.bubbleSort(myArray);
   watch.stop();
   System.out.println("Bubble Sort took " +watch.elapsedTime()/1000 + " microseconds");
-  for (Integer o : myArray) {
-     System.out.print(o);
-   } 
-   System.out.println();
+  // for (Integer o : myArray) {
+  //    System.out.print(o);
+  //  } 
+  //  System.out.println();
 }
 public void insertionSortTest()
 {
@@ -65,6 +65,9 @@ public void insertionSortTest()
   mySorts.insertionSort(myArray);
   watch.stop();
   System.out.println("Insertion Sort took " +watch.elapsedTime()/1000 + " microseconds");
+// for (Integer o : myArray) {
+//      System.out.print(o);
+//    } 
 }
 public void mergeSortTest()
 {

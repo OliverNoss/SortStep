@@ -1,4 +1,4 @@
-private int numInts = 10;
+private int numInts = 100;
 private int largestInt = 100;
 private int [] myArray= new int[numInts];
 private Stopwatch watch = new Stopwatch();
@@ -49,6 +49,9 @@ public void insertionSortTest()
   mySorts.insertionSort(myArray);
   watch.stop();
   System.out.println("Insertion Sort took " +watch.elapsedTime()/1000 + " microseconds");
+// for (Integer o : myArray) {
+//      System.out.print(o);
+//    } 
 }
 public void mergeSortTest()
 {

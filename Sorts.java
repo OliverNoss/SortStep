@@ -35,9 +35,14 @@ public class Sorts
   public void insertionSort(int[] list)
   {
     for (int i=0; i<list.length; i++) {
-      for (int j=0; j<list.length; j++) {
-      
+      int j = i;
+      int k = list[j];
+      while (j>0&&list[j-1]>k) {
+      list[j] = list[j-1];
+      j--;
       }
+    
+    list[j] = k;
     }
   }
 
